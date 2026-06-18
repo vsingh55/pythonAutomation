@@ -9,9 +9,14 @@ from main import process_file
 app = Flask(__name__)
 app.secret_key = "etap_report_generator_key"
 
+# Configure absolute paths relative to the project root directory
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+INPUT_FOLDER = os.path.join(BASE_DIR, "data", "input")
+OUTPUT_FOLDER = os.path.join(BASE_DIR, "data", "output")
+
 # Ensure directories exist
-os.makedirs(os.path.join("data", "input"), exist_ok=True)
-os.makedirs(os.path.join("data", "output"), exist_ok=True)
+os.makedirs(INPUT_FOLDER, exist_ok=True)
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 # Elegant, modern dark-mode upload UI
 HTML_TEMPLATE = """
@@ -361,13 +366,13 @@ def upload():
         return redirect(url_for('index'))
         
     # Save input file to watched inputs
-    input_path = os.path.join("data", "input", filename)
+    input_path = os.path.join(INPUT_FOLDER, filename)
     file.save(input_path)
     
     # Process file to PDF
     name_no_ext, _ = os.path.splitext(filename)
     output_pdf_name = f"{name_no_ext}_report.pdf"
-    output_path = os.path.join("data", "output", output_pdf_name)
+    output_path = os.path.join(OUTPUT_FOLDER, output_pdf_name)
     
     # Run parsing & generation
     success = process_file(input_path, output_path)
@@ -385,7 +390,7 @@ def upload():
 
 @app.route('/samples/<filename>')
 def serve_sample(filename):
-    sample_path = os.path.join("data", "input", filename)
+    sample_path = os.path.join(INPUT_FOLDER, filename)
     if os.path.exists(sample_path):
         return send_file(sample_path, as_attachment=True)
     else:
