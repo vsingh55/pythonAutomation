@@ -43,7 +43,7 @@ class NumberedCanvas(canvas.Canvas):
         # Header (Only on page 2 and later)
         if self._pageNumber > 1:
             self.line(left_margin, top_y + 10, right_margin, top_y + 10)
-            self.drawString(left_margin, top_y + 16, "MATLAB & PYTAP PARAMETER ANALYSIS REPORT")
+            self.drawString(left_margin, top_y + 16, "ETAP PARAMETER ANALYSIS REPORT")
             self.drawRightString(right_margin, top_y + 16, "TECHNICAL CONFERENCE PAPER STYLE")
             
         # Footer (On all pages)
@@ -251,7 +251,7 @@ def build_pdf(data_dict, line_chart_path, bar_chart_path, output_pdf_path):
     viz_elements = []
     viz_elements.append(Paragraph("3. Analytical Graphical Visualizations", h1_style))
     viz_elements.append(Paragraph(
-        "The plots below present (a) the runs profile of key operational parameters monitored from Matlab/PyTap data, "
+        "The plots below present (a) the runs profile of key operational parameters monitored from ETAP simulation data, "
         "and (b) a comparative analysis of the final measured parameter states against standard threshold safety limits.",
         body_style
     ))

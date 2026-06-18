@@ -13,7 +13,7 @@ def create_sample_files():
         ["Title", "Power Grid Integration Performance Report"],
         ["Author", "Vijay Kumar Singh"],
         ["Date", "2026-06-18"],
-        ["Abstract", "This technical report evaluates the dynamic stability and power grid integration parameters for the primary utility inverter bank. Measurements were acquired via Matlab Simulink and PyTap run routines under step-load conditions."],
+        ["Abstract", "This technical report evaluates the dynamic stability and power grid integration parameters for the primary utility inverter bank. Measurements were acquired via ETAP simulation and related transient run routines under step-load conditions."],
         ["Methodology", "A 60-second operational run was conducted at a sampling interval of 10 seconds. Active power levels, system frequency, grid bus voltage, and inverter core temperature were monitored for safety limit violations."]
     ]
     metadata_df = pd.DataFrame(metadata_data)
@@ -62,7 +62,7 @@ def create_sample_files():
 Title,Wind Turbine Generation Compliance Audit
 Author,Vijay Kumar Singh
 Date,2026-06-18
-Abstract,"Performance audit report analyzing turbine grid-synchronization under variable wind shear conditions. The data runs were compiled via PyTap wind modeling adapters."
+Abstract,"Performance audit report analyzing turbine grid-synchronization under variable wind shear conditions. The data runs were compiled via ETAP wind modeling adapters."
 Methodology,"Transient fault-ride-through (FRT) check conducted for 60 seconds with active yawing and blade pitching enabled."
 
 [Summary]

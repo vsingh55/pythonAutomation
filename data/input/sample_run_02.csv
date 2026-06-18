@@ -2,7 +2,7 @@
 Title,Wind Turbine Generation Compliance Audit
 Author,Vijay Kumar Singh
 Date,2026-06-18
-Abstract,"Performance audit report analyzing turbine grid-synchronization under variable wind shear conditions. The data runs were compiled via PyTap wind modeling adapters."
+Abstract,"Performance audit report analyzing turbine grid-synchronization under variable wind shear conditions. The data runs were compiled via ETAP wind modeling adapters."
 Methodology,"Transient fault-ride-through (FRT) check conducted for 60 seconds with active yawing and blade pitching enabled."
 
 [Summary]

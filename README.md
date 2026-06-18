@@ -1,6 +1,6 @@
-# Matlab/PyTap Automated PDF Report Generator
+# ETAP Automated PDF Report Generator
 
-This repository contains a modular Python automation pipeline designed to parse operational parameter logs (from Matlab/Simulink and PyTap run routines, exported as `.xlsx` or `.csv` files) and dynamically generate publication-quality, classic academic conference-style PDF reports.
+This repository contains a modular Python automation pipeline designed to parse operational parameter logs (from ETAP simulation run routines, exported as `.xlsx` or `.csv` files) and dynamically generate publication-quality, classic academic conference-style PDF reports.
 
 ## Features
 

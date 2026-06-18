@@ -7,7 +7,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from main import process_file
 
 app = Flask(__name__)
-app.secret_key = "matlab_pytap_report_generator_key"
+app.secret_key = "etap_report_generator_key"
 
 # Ensure directories exist
 os.makedirs(os.path.join("data", "input"), exist_ok=True)
@@ -20,7 +20,7 @@ HTML_TEMPLATE = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matlab/PyTap Report Compiler</title>
+    <title>ETAP Report Compiler</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -253,7 +253,7 @@ HTML_TEMPLATE = """
     <div class="container">
         <header>
             <h1>Report Compiler</h1>
-            <div class="subtitle">Convert Matlab / PyTap spreadsheets to academic PDFs</div>
+            <div class="subtitle">Convert ETAP spreadsheets to academic PDFs</div>
         </header>
 
         {% with messages = get_flashed_messages(with_categories=true) %}

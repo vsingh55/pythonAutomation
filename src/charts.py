@@ -1,4 +1,5 @@
 import os
+# pyrefly: ignore [missing-import]
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -43,7 +44,7 @@ def generate_line_chart(df, output_dir):
         
     ax.set_xlabel(str(x_col), fontsize=10, fontweight='bold', labelpad=4)
     ax.set_ylabel("Parameter Value", fontsize=10, fontweight='bold', labelpad=4)
-    ax.set_title("System Parameter Run Profiles (Matlab/PyTap Output)", fontsize=10, fontweight='bold', pad=8)
+    ax.set_title("System Parameter Run Profiles (ETAP Output)", fontsize=10, fontweight='bold', pad=8)
     
     # Minimal grid
     ax.grid(True, which='both', linestyle='--', linewidth=0.5, color='#dddddd')

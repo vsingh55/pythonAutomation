@@ -135,7 +135,7 @@ def start_watcher(input_dir):
     observer.join()
 
 def main():
-    parser = argparse.ArgumentParser(description="Matlab/PyTap Automated PDF Report Generator")
+    parser = argparse.ArgumentParser(description="ETAP Automated PDF Report Generator")
     parser.add_argument('-i', '--input', help="Path to input spreadsheet file (.xlsx or .csv)")
     parser.add_argument('-o', '--output', help="Path to write output PDF (optional)")
     parser.add_argument('-w', '--watch', action='store_true', help="Run in directory watcher mode")
