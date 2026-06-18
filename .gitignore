@@ -1,0 +1,29 @@
+# Python environment & virtualenv
+.venv/
+venv/
+ENV/
+bin/
+lib/
+include/
+pip-selfcheck.json
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Matplotlib & cache files
+.matplotlib/
+.cache/
+
+# Local logs and trace outputs
+logs/
+*.log
+
+# Project specific input/output data (protect customer data privacy)
+data/output/*
+!data/output/.gitkeep
+
+# System files
+.DS_Store
+Thumbs.db

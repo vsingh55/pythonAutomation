@@ -1,0 +1,24 @@
+[Metadata]
+Title,Wind Turbine Generation Compliance Audit
+Author,Vijay Kumar Singh
+Date,2026-06-18
+Abstract,"Performance audit report analyzing turbine grid-synchronization under variable wind shear conditions. The data runs were compiled via PyTap wind modeling adapters."
+Methodology,"Transient fault-ride-through (FRT) check conducted for 60 seconds with active yawing and blade pitching enabled."
+
+[Summary]
+Parameter,Measured,Units,Limit,Status,Conclusion
+Turbine Speed,14.8,rpm,<15,PASS,Rotation speed within safety threshold.
+Generator Output,2.1,MW,>1.8,PASS,Generator capacity meeting baseline.
+Pitch Angle,4.5,deg,0-10,PASS,Blade pitching operating nominal.
+Gearbox Vibration,2.8,mm/s,<3.0,WARNING,Gearbox mechanical vibration near caution limit.
+Grid Voltage,11.05,kV,10.45-11.55,PASS,Synchronization voltage compliance met.
+
+[TimeSeries]
+Time,Turbine Speed,Generator Output,Pitch Angle,Gearbox Vibration
+0,12.1,1.82,2.0,2.1
+10,13.5,1.95,3.1,2.3
+20,14.2,2.05,4.0,2.5
+30,14.8,2.10,4.5,2.8
+40,14.5,2.08,4.3,2.7
+50,13.9,1.98,3.8,2.6
+60,12.8,1.88,2.5,2.4
